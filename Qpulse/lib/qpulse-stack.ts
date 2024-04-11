@@ -11,7 +11,7 @@ export class QpulseStack extends cdk.Stack {
       pipelineName: 'QpulsePipeline',
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.gitHub('shrutig348/repo2', 'main'),
-        commands: ['npm ci', 'npm run build', 'npx cdk synth']
+        commands: ['cd Qpulse', 'pwd', 'npm ci', 'npm run build', 'npx cdk synth']
       })
     });
     pipeline.addStage(new QpulseAppStage(this, "test", {
