@@ -12,7 +12,7 @@ export class MyLambdaStack1 extends cdk.Stack {
         handler: 'index.handler',
         code: new InlineCode('exports.handler = _ => "Hello, CDK";'),
         vpc: ec2.Vpc.fromLookup(this, 'testVpc',{vpcName: 'test-vpc'}),
-        functionName: 'Qpulse-lambda',
+        functionName: 'Qpulse-lambda1',
         vpcSubnets: {
           subnetType: ec2.SubnetType.PUBLIC,
         },
