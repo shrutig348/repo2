@@ -15,7 +15,7 @@ export class QpulseStack extends cdk.Stack {
         primaryOutputDirectory: "Qpulse/cdk.out"
       })
     });
-    pipeline.addStage(new QpulseAppStage(this, "test", {
+    pipeline.addStage(new QpulseAppStage(this, "qpulsetest", {
       env: { account: "339712799220", region: "ap-south-1" }
     }));
   }
